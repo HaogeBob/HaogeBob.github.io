@@ -1,6 +1,6 @@
 site_name: 褚文浩
 site_description: 褚文浩的个人学术主页，研究方向包括多模态模型、视觉语言模型与计算机视觉。
-site_url: https://haogebob.me/
+site_url: https://haogebob.github.io/
 remote_branch: gh-pages
 
 theme:
