@@ -1,0 +1,13 @@
+# Local Python environment
+.venv/
+
+# MkDocs build output
+site/
+
+# Python cache files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Common local files
+.DS_Store
