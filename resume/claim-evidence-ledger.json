@@ -1,0 +1,43 @@
+{
+  "candidate": "褚文浩",
+  "target_role": "大模型后训练算法工程师",
+  "source": "docs/index.md",
+  "updated": "2026-08-22",
+  "claims": [
+    {
+      "id": "vlm-dpo-hallucination",
+      "claim": "使用迭代式 DPO 对国画赏析 VLM 进行后训练，在 MMHAL-Bench 上将幻觉率从 37% 降至 30%",
+      "status": "confirmed_in_public_profile",
+      "evidence": "docs/index.md#experience",
+      "boundary": "共同第一作者；论文正在向 NPJ 投稿"
+    },
+    {
+      "id": "low-resource-ocr",
+      "claim": "主导低资源国画题跋 OCR 任务，构建领域自举样本扩充与迭代训练 pipeline；F1 较基模提升 8%，较 GPT-5.4 提升 30%",
+      "status": "confirmed_in_public_profile",
+      "evidence": "docs/index.md#experience",
+      "boundary": "独立第一作者；论文计划投稿 ICLR 2027"
+    },
+    {
+      "id": "agent-rl-framework",
+      "claim": "改造开源 Agent RL 框架以适配国画模型和领域工具，支持工具调用、多轮验证、长期记忆、总结与奖励反馈",
+      "status": "confirmed_in_public_profile",
+      "evidence": "docs/index.md#projects",
+      "boundary": "没有公开量化指标，不表述为从零自研完整框架"
+    },
+    {
+      "id": "bytedance-shader-precompile",
+      "claim": "设计并实现 Shader 预编译方案，使用户可感知的编译等待时间下降 90%",
+      "status": "confirmed_in_public_profile",
+      "evidence": "docs/index.md#experience",
+      "boundary": "字节跳动飞书产品线视频流渲染模块"
+    },
+    {
+      "id": "kaggle-results",
+      "claim": "Kaggle BirdCLEF 2025 排名 27/2027、银牌第 13 名；CSIRO Image2Biomass 2026 排名 89/3805、银牌",
+      "status": "confirmed_in_public_profile",
+      "evidence": "docs/index.md#competitions",
+      "boundary": "竞赛成绩，不推导为单人业务成果"
+    }
+  ]
+}

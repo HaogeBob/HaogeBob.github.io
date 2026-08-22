@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="褚文浩 - 大模型后训练算法工程师简历">
+  <title>褚文浩 | 大模型后训练算法工程师</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    :root {
+      --accent: #2458b8;
+      --accent-dark: #183f88;
+      --ink: #151a22;
+      --muted: #596273;
+      --line: #d8dde6;
+      --band: #f2f4f7;
+      --paper: #ffffff;
+      --workspace: #e9edf2;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--workspace);
+      color: var(--ink);
+      font-family: "Times New Roman", "Microsoft YaHei", "PingFang SC", sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+    button, select, input { font: inherit; letter-spacing: 0; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    .toolbar {
+      position: sticky;
+      z-index: 20;
+      top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      width: fit-content;
+      max-width: calc(100vw - 20px);
+      margin: 8px auto;
+      padding: 7px 9px;
+      border: 1px solid #c8ced8;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 5px 18px rgb(24 39 61 / 14%);
+      color: #334155;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      font-size: 12px;
+    }
+    .toolbar button, .toolbar select {
+      min-height: 31px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      background: #fff;
+      color: #263446;
+    }
+    .toolbar button { cursor: pointer; padding: 0 10px; }
+    .toolbar button:hover, .toolbar button:focus-visible, .toolbar select:focus-visible {
+      border-color: var(--accent);
+      outline: 2px solid rgb(36 88 184 / 14%);
+    }
+    .toolbar .icon-button { width: 34px; padding: 0; font-weight: 800; }
+    .toolbar .print-button { border-color: var(--accent); background: var(--accent); color: #fff; font-weight: 700; }
+    .toolbar .home-link { padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 4px; color: #263446; text-decoration: none; }
+    .toolbar .save-status { min-width: 52px; color: #64748b; text-align: center; }
+    .toolbar .color-input { width: 32px; min-height: 31px; padding: 3px; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; cursor: pointer; }
+    .toolbar-divider { width: 1px; height: 22px; background: #dbe1e8; }
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 10mm;
+      padding: 9mm 11mm 9mm;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 3px 20px rgb(29 39 53 / 18%);
+    }
+    body[data-page-mode="continuous"] .resume-pages {
+      width: 210mm;
+      margin: 0 auto 12mm;
+      background: #fff;
+      box-shadow: 0 3px 20px rgb(29 39 53 / 18%);
+    }
+    body[data-page-mode="continuous"] .sheet {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      margin: 0;
+      overflow: visible;
+      box-shadow: none;
+    }
+    body[data-page-mode="continuous"] .sheet + .sheet { padding-top: 0; }
+    [contenteditable="true"]:focus { outline: 2px solid #b8caf0; outline-offset: -2px; }
+    .header-grid { display: grid; grid-template-columns: minmax(0, 1fr) 27mm; gap: 7mm; align-items: start; }
+    h1 { margin: 0 0 2px; font-family: "Microsoft YaHei", sans-serif; font-size: 23pt; line-height: 1.08; }
+    .target-role { margin: 0 0 3px; color: var(--accent-dark); font-size: 12pt; font-weight: 700; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 2px 10px; margin: 2px 0; color: #303846; font-size: 9.2pt; }
+    .contact-row span::before { content: "|"; margin-right: 10px; color: #a2a9b4; }
+    .contact-row span:first-child::before { display: none; }
+    .profile-photo {
+      width: 27mm;
+      height: 34mm;
+      border: 1px solid #c7ccd5;
+      background: #f7f8fa;
+      cursor: pointer;
+      object-fit: cover;
+    }
+    .profile-photo:focus-visible { outline: 2px solid var(--accent); }
+    .summary {
+      margin: 5px 0 0;
+      padding: 5px 7px;
+      border-left: 3px solid var(--accent);
+      background: #f7f9fc;
+      color: #263446;
+      font-size: 9.4pt;
+    }
+    .section { margin-top: 7px; }
+    .section-title {
+      margin: 0 0 4px;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid var(--accent);
+      color: var(--accent);
+      font-family: "Microsoft YaHei", sans-serif;
+      font-size: 15pt;
+      line-height: 1.08;
+      break-after: avoid;
+    }
+    .company-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      min-height: 27px;
+      margin: 5px 0 3px;
+      padding: 4px 7px;
+      border-radius: 5px;
+      background: var(--band);
+      break-inside: avoid;
+    }
+    .company-name { font-size: 10.5pt; font-weight: 700; }
+    .company-meta { color: #313946; font-size: 9pt; white-space: nowrap; }
+    .project { margin: 3px 0 5px; break-inside: avoid; }
+    .project-title { margin: 2px 0 1px; color: var(--accent-dark); font-size: 10.2pt; font-weight: 700; break-after: avoid; }
+    ul { margin: 1px 0 2px 17px; padding: 0; }
+    li { margin: 1px 0; break-inside: avoid; }
+    li::marker { color: var(--accent); font-size: .8em; }
+    .compact-list { columns: 2; column-gap: 24px; }
+    .compact-list li { break-inside: avoid; }
+    .evidence { color: #142f69; font-weight: 700; }
+    .muted { color: var(--muted); }
+    .skills-grid { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 3px 8px; margin-top: 3px; }
+    .skills-grid strong { color: #263d67; }
+    .footer-note { margin-top: 5px; color: #7a828e; font-size: 8pt; text-align: right; }
+    @media (max-width: 860px) {
+      body { background: #fff; }
+      .toolbar { position: static; }
+      .resume-pages, body[data-page-mode="continuous"] .resume-pages { width: 100%; margin: 0; box-shadow: none; }
+      .sheet, body[data-page-mode="continuous"] .sheet { width: 100%; height: auto; min-height: 0; padding: 18px; overflow: visible; box-shadow: none; }
+      .header-grid { grid-template-columns: minmax(0, 1fr) 24mm; gap: 12px; }
+      .profile-photo { width: 24mm; height: 31mm; }
+      .company-bar { grid-template-columns: 1fr; gap: 1px; }
+      .company-meta { white-space: normal; }
+      .compact-list { columns: 1; }
+    }
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none; }
+      .resume-pages, body[data-page-mode="continuous"] .resume-pages { width: auto; margin: 0; box-shadow: none; }
+      .sheet, body[data-page-mode="continuous"] .sheet {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 9mm 11mm;
+        overflow: hidden;
+        box-shadow: none;
+        break-after: page;
+      }
+      .sheet:last-child { break-after: auto; }
+      a { color: var(--accent); text-decoration: none; }
+    }
+  </style>
+</head>
+<body data-page-mode="paged">
+  <nav class="toolbar" aria-label="简历编辑工具栏">
+    <a class="home-link" href="../" title="返回个人主页">主页</a>
+    <select id="pageMode" aria-label="页面模式" title="切换 A4 分页或连续编辑">
+      <option value="paged">A4 分页</option>
+      <option value="continuous">A4 长页</option>
+    </select>
+    <span class="toolbar-divider" aria-hidden="true"></span>
+    <button class="icon-button" id="undoButton" type="button" title="撤回" aria-label="撤回">&#8630;</button>
+    <button class="icon-button" id="redoButton" type="button" title="重做" aria-label="重做">&#8631;</button>
+    <button class="icon-button" id="boldButton" type="button" title="加粗选中文字" aria-label="加粗"><strong>B</strong></button>
+    <select id="fontFamily" aria-label="字体" title="调整选中文字字体">
+      <option value="Microsoft YaHei">微软雅黑</option>
+      <option value="SimHei">黑体</option>
+      <option value="SimSun">宋体</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+    <select id="fontSize" aria-label="字号" title="调整选中文字字号">
+      <option value="9pt">9 pt</option>
+      <option value="9.5pt" selected>9.5 pt</option>
+      <option value="10pt">10 pt</option>
+      <option value="11pt">11 pt</option>
+      <option value="12pt">12 pt</option>
+    </select>
+    <input class="color-input" id="textColor" type="color" value="#151a22" aria-label="文字颜色" title="调整选中文字颜色">
+    <span id="saveStatus" class="save-status" role="status">已保存</span>
+    <button id="resetButton" type="button" title="恢复此版本的初始内容">重置</button>
+    <button class="print-button" type="button" onclick="window.print()">打印 / PDF</button>
+  </nav>
+
+  <div id="resumePages" class="resume-pages">
+    <main class="sheet" contenteditable="true" aria-label="简历第一页">
+      <header class="header-grid">
+        <div>
+          <h1>褚文浩</h1>
+          <p class="target-role">大模型后训练算法工程师 · 多模态 / VLM / Agent</p>
+          <div class="contact-row">
+            <span><a href="mailto:2896475326@qq.com">2896475326@qq.com</a></span>
+            <span><a href="https://github.com/HaogeBob">github.com/HaogeBob</a></span>
+            <span><a href="https://haogebob.github.io/">haogebob.github.io</a></span>
+          </div>
+          <div class="contact-row">
+            <span><a href="https://www.kaggle.com/haogebob">kaggle.com/haogebob</a></span>
+            <span><a href="https://openreview.net/profile?id=%7EWenhao_Chu1">OpenReview / Wenhao Chu</a></span>
+          </div>
+          <p class="summary"><strong>岗位定位：</strong>聚焦多模态大模型后训练与领域模型优化，具备从数据构建、偏好优化、模型评测到 Agent 工具编排的完整实践；兼有 C++ 图形系统开发背景，能够衔接算法实验与工程落地。</p>
+        </div>
+        <img id="profilePhoto" class="profile-photo" src="../assets/profile-avatar.jpg" alt="褚文浩证件照，可点击替换" tabindex="0" title="点击替换照片">
+        <input id="photoInput" type="file" accept="image/*" hidden>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">教育背景</h2>
+        <div class="company-bar">
+          <div class="company-name">浙江大学 · 西方经济学 · 硕士研究生（保研）</div>
+          <div class="company-meta">2021.09 - 2023.06</div>
+        </div>
+        <div class="company-bar">
+          <div class="company-name">浙江大学 · 经济学 · 本科 · 辅修计算机科学</div>
+          <div class="company-meta">2017.09 - 2021.06</div>
+        </div>
+        <div class="muted">浙江大学一等奖学金 · 恒逸奖学金 · 不动产奖学金</div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">大模型后训练与研究经历</h2>
+        <div class="company-bar">
+          <div class="company-name">浙江大学全息研究院 · 助理研究员</div>
+          <div class="company-meta">2025.04 - 至今</div>
+        </div>
+
+        <article class="project">
+          <div class="project-title">国画赏析 VLM 幻觉抑制 · 迭代式 DPO 后训练</div>
+          <ul>
+            <li><strong>问题与目标：</strong>面向国画赏析场景中视觉语言模型的事实性幻觉，建立偏好优化与评测迭代链路。</li>
+            <li><strong>技术动作：</strong>使用迭代式 DPO 对领域 VLM 进行后训练，围绕回答质量与幻觉样本持续优化训练数据和策略。</li>
+            <li><strong>结果证据：</strong>在 MMHAL-Bench 上将幻觉率由 <span class="evidence">37% 降至 30%</span>；共同第一作者论文 <em>Zhihua: Leveraging Vision Language Models for TCPs</em> 正在向 NPJ 投稿。</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-title">低资源国画题跋 OCR · 领域自举数据与迭代训练</div>
+          <ul>
+            <li><strong>个人职责：</strong>主导题跋识别任务，针对少样本、高噪声和领域分布差异设计端到端优化方案。</li>
+            <li><strong>技术动作：</strong>提出领域自举范式，在少量种子样本上构建样本扩充 pipeline，并将数据生成、质量筛选与模型迭代训练串联为闭环。</li>
+            <li><strong>结果证据：</strong>模型 F1 较基模提升 <span class="evidence">8%</span>、较 GPT-5.4 提升 <span class="evidence">30%</span>；独立第一作者论文计划投稿 ICLR 2027。</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-title">国画 Agent 训练与推理框架 · Agent RL / Tool Use</div>
+          <ul>
+            <li><strong>框架适配：</strong>改造开源 Agent RL 框架，使其适配国画领域模型、数据与工具环境，衔接训练和推理流程。</li>
+            <li><strong>能力建设：</strong>实现基于 LLM 的工具调用、多轮问答验证、长期记忆管理、总结与奖励反馈，并统一编排 OCR、技法分析、RAG 和联网搜索。</li>
+            <li><strong>工程价值：</strong>将分散的领域能力组织为可协同调用的 Agent 系统，为后续奖励设计、轨迹评测与策略优化提供运行基础。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">算法与系统工程经历</h2>
+        <div class="company-bar">
+          <div class="company-name">字节跳动 · 飞书视频流渲染开发</div>
+          <div class="company-meta">2023.07 - 2024.01</div>
+        </div>
+        <ul>
+          <li>负责飞书视频流渲染模块的算法调优，在画面质量与性能开销之间进行工程权衡；以双边滤波替换原 Mipmap 方案，提升高分辨率共享文档的显示锐度。</li>
+          <li>针对 Shader 编译慢设计并实现预编译方案，使用户可感知的编译等待时间下降 <span class="evidence">90%</span>。</li>
+        </ul>
+      </section>
+    </main>
+
+    <main class="sheet" contenteditable="true" aria-label="简历第二页">
+      <section class="section">
+        <h2 class="section-title">论文与代表项目</h2>
+        <article class="project">
+          <div class="project-title">Zhihua: Leveraging Vision Language Models for TCPs · 共同第一作者</div>
+          <ul>
+            <li>围绕传统国画赏析中的多模态理解和幻觉问题开展 VLM 后训练研究；采用迭代式 DPO，在 MMHAL-Bench 上验证幻觉率改善。</li>
+            <li class="muted">状态：NPJ 投稿中 · 作者主页：openreview.net/profile?id=~Wenhao_Chu1</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-title">Domain-Bootstrapped OCR for Low-Resource TCPIs · 独立第一作者</div>
+          <ul>
+            <li>提出面向低资源、高噪声题跋文本的领域自举方法，通过样本扩充和迭代训练改善识别质量。</li>
+            <li class="muted">状态：计划投稿 ICLR 2027</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-title">蒙特卡洛光线追踪渲染器 · C++ / BRDF / 重要性采样</div>
+          <ul>
+            <li>不依赖 OpenGL 等图形库，从基础代码实现离线光线追踪渲染器；基于微平面理论构建 BRDF，并为光滑物体实现重要性采样。</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-title">基于 PRT 的实时全局光照 · C++ / WebGL / 球谐函数</div>
+          <ul>
+            <li>预计算光照项与传输项并存储为球谐函数系数，使用 WebGL 完成实时渲染，并利用球谐函数旋转特性支持光源旋转。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">其他经历与竞赛</h2>
+        <div class="company-bar">
+          <div class="company-name">莉莉丝游戏 · UE4 游戏开发实习生</div>
+          <div class="company-meta">2022.06 - 2022.08</div>
+        </div>
+        <ul>
+          <li>修改 UE4.26 Runtime 模块下的 Shader Bytecode 文件系统，拆分 Shader Archive 并调整读写逻辑，以支持 Shader 增量更新。</li>
+        </ul>
+        <div class="company-bar">
+          <div class="company-name">Kaggle 计算机视觉竞赛</div>
+          <div class="company-meta">2025 - 2026</div>
+        </div>
+        <ul class="compact-list">
+          <li><strong>BirdCLEF 2025：</strong>27 / 2027，银牌第 13 名；鸟叫音频物种分类。</li>
+          <li><strong>CSIRO Image2Biomass 2026：</strong>89 / 3805，银牌；航拍顶视图牧草生物量回归。</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">技术能力</h2>
+        <div class="skills-grid">
+          <strong>后训练</strong><span>DPO、RLHF、RLAIF、LoRA、VLM Post-training、奖励反馈与评测迭代</span>
+          <strong>模型工程</strong><span>PyTorch、MS-Swift、DeepSpeed、Stable Diffusion、Agent RL、RAG、Tool Use</span>
+          <strong>算法方向</strong><span>多模态理解、低资源 OCR、计算机视觉、推荐系统、数据扩充与质量评测</span>
+          <strong>工程能力</strong><span>Python、C/C++、WebGL、UE4、Shader、训练与推理流程适配</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">岗位匹配摘要</h2>
+        <ul>
+          <li><strong>训练闭环：</strong>具备领域数据构建、偏好优化、迭代训练与基准评测实践，能够从错误样本回流到后训练策略更新。</li>
+          <li><strong>多模态方向：</strong>研究和项目集中于 VLM 幻觉抑制、视觉文本识别与领域多模态 Agent，和大模型后训练算法岗位直接相关。</li>
+          <li><strong>工程底座：</strong>既有 PyTorch / DeepSpeed 等模型工程能力，也有字节跳动与莉莉丝的 C++ 图形系统经历，能够处理性能、质量与可维护性的综合约束。</li>
+          <li><strong>可验证成果：</strong>核心表述均对应主页公开项目、论文状态或量化结果；未使用无法核验的“主导全链路”“核心 Owner”等强主张。</li>
+        </ul>
+        <p class="footer-note">最后更新：2026 年 8 月 · 在线版：haogebob.github.io/resume/</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (() => {
+      const storageKey = "haogebob-resume-v1";
+      const pages = document.getElementById("resumePages");
+      const pageMode = document.getElementById("pageMode");
+      const saveStatus = document.getElementById("saveStatus");
+      const photo = document.getElementById("profilePhoto");
+      const photoInput = document.getElementById("photoInput");
+      const initialMarkup = pages.innerHTML;
+      let saveTimer;
+
+      const save = () => {
+        localStorage.setItem(storageKey, pages.innerHTML);
+        saveStatus.textContent = "已保存";
+      };
+
+      const queueSave = () => {
+        saveStatus.textContent = "保存中";
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(save, 300);
+      };
+
+      const restorePhotoHandler = () => {
+        const currentPhoto = document.getElementById("profilePhoto");
+        if (!currentPhoto) return;
+        currentPhoto.addEventListener("click", () => photoInput.click());
+        currentPhoto.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") photoInput.click();
+        });
+      };
+
+      const saved = localStorage.getItem(storageKey);
+      if (saved) pages.innerHTML = saved;
+      restorePhotoHandler();
+
+      pages.addEventListener("input", queueSave);
+      pageMode.addEventListener("change", () => {
+        document.body.dataset.pageMode = pageMode.value;
+      });
+      document.getElementById("undoButton").addEventListener("click", () => document.execCommand("undo"));
+      document.getElementById("redoButton").addEventListener("click", () => document.execCommand("redo"));
+      document.getElementById("boldButton").addEventListener("click", () => document.execCommand("bold"));
+      document.getElementById("fontFamily").addEventListener("change", (event) => {
+        document.execCommand("fontName", false, event.target.value);
+        queueSave();
+      });
+      document.getElementById("fontSize").addEventListener("change", (event) => {
+        document.execCommand("fontSize", false, "7");
+        document.querySelectorAll('font[size="7"]').forEach((node) => {
+          node.removeAttribute("size");
+          node.style.fontSize = event.target.value;
+        });
+        queueSave();
+      });
+      document.getElementById("textColor").addEventListener("input", (event) => {
+        document.execCommand("foreColor", false, event.target.value);
+        queueSave();
+      });
+      document.getElementById("resetButton").addEventListener("click", () => {
+        if (!window.confirm("恢复初始简历内容？浏览器中的编辑记录将被清除。")) return;
+        localStorage.removeItem(storageKey);
+        pages.innerHTML = initialMarkup;
+        restorePhotoHandler();
+        saveStatus.textContent = "已重置";
+      });
+      photoInput.addEventListener("change", () => {
+        const file = photoInput.files && photoInput.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+          const currentPhoto = document.getElementById("profilePhoto");
+          currentPhoto.src = reader.result;
+          queueSave();
+        });
+        reader.readAsDataURL(file);
+      });
+    })();
+  </script>
+</body>
+</html>
