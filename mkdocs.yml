@@ -17,6 +17,7 @@ theme:
 
 nav:
   - 主页: index.md
+  - 算法简历: resume/index.html
   - 研究与项目:
       - 研究与项目: course/index.md
       - 写作示例: course/example.md
